@@ -16,5 +16,20 @@ function checkTime(i) {
     return i;
 }
 
+function displayDate() {
+    var today = new Date();
+    let m = today.getMonth();
+    let d = today.getDay();
+    let y = today.getFullYear();
+    m = checkDate(m);
+    d = checkDate(d);
+    document.getElementById('date').innerHTML =  m + "/" + d + "/" + y;
+}
 
+displayDate()
+
+function checkDate(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
 
